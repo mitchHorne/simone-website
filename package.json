@@ -1,0 +1,32 @@
+{
+  "name": "Enchanted-Moments",
+  "version": "1.0.0",
+  "description": " PAY ATTENTION!!!!!   Website for parties",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --progress --colors",
+    "watch": "webpack --progress --colors --watch"
+  },
+  "author": "Mitchell Horne",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.4",
+    "smooth-scrolling": "^2.2.8",
+    "smoothscroll": "^0.2.2"
+  },
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "exports-loader": "^0.6.3",
+    "expose-loader": "^0.7.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "imports-loader": "^0.6.5",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1"
+  }
+}

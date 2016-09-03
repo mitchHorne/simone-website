@@ -1,0 +1,287 @@
+@white: #fff;
+@darkPink: #E53971;
+@softPink: #FF69B4;
+@activeColor: #62B1F6;
+
+/************************************/
+/*********       Main       *********/
+/************************************/
+
+::selection {
+  background: #ffb7b7;
+}
+::-moz-selection {
+  background: #ffb7b7;
+}
+
+body{
+  background: #fff ;
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+}
+
+a, a:hover, a:active, a:focus{
+  outline: 0 !important;
+}
+
+.container-fluid{
+  padding: 0;
+}
+
+hr{
+  height: 25px;
+  border-style: solid;
+  border-color: #222;
+  border-width: 1px 0 0 0;
+  border-radius: 150px;
+  width: 50%;
+}
+hr:before{
+  display: block;
+  content: "";
+  height: 25px;
+  margin-top: -25px;
+  border-style: solid;
+  border-color: #222;
+  border-width: 0 0 1px 0;
+  border-radius: 150px;
+  width: 100%;
+}
+
+span h4{
+  display: inline-block;
+}
+
+.information{
+  font-family: 'Bad Script', cursive;
+}
+
+.special-text{
+  color: @darkPink;
+  font-family: 'Great Vibes', cursive;
+}
+
+/************************************/
+/********     Navigation     ********/
+/************************************/
+
+.menu-control{
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.menu-control i{
+  background: #fff;
+  border-radius: 0 0 0 15px;
+  color: #E53971;
+  padding: 10px 20px;
+  transition: all .3s;
+}
+.menu-control i:active,
+.menu-control i:focus{
+  text-shadow: 0 0 10px #fff;
+}
+.menu-control i:hover{
+  background: #F79BC0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu{
+  background: #fff;
+  display: block;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  text-align: left;
+  width: 25%;
+  z-index: 5;
+}
+
+.menu .brand{
+  color: #444;
+  display: inline-block;
+  font-size: 3em;
+  text-decoration: none;
+  transition: all .3s;
+}
+.menu .item-list{
+  display: block;
+  padding: 5px 10px 5px 20px;
+}
+
+.menu .menu-item{
+  color: #444;
+  font-size: 2.2em;
+  text-decoration: none;
+  transition: all .3s;
+  width: 100%;
+}
+
+.menu .brand:hover,
+.menu .menu-item:hover{
+  color:#E53971;
+  text-shadow: 0 0 10px  #F79BC0;
+}
+
+/************************************/
+/********       Header       ********/
+/************************************/
+
+.header{
+  align-items: flex-end;
+  background: url("../images/background.jpg") top right no-repeat;
+  background-size: 75% 100%;
+  display: flex;
+  justify-content: left;
+  height: 100vh;
+}
+
+.header h1{
+  color: #E53971;
+  font-size: 6em;
+  padding: 0 0 150px 40px;
+  text-shadow: 0 0 10px #fff;
+}
+
+/************************************/
+/********      Carousel      ********/
+/************************************/
+
+
+
+/************************************/
+/*********      About       *********/
+/************************************/
+
+#about{
+  z-index: 2;
+}
+
+#about h1{
+  color: @darkPink;
+  font-size: 3em;
+  padding: 10px 0 5px;
+}
+
+#about .fa-stack{
+  text-shadow: 0 0 5px 2px #222;
+  font-size: 4em;
+}
+#about .fa-stack .fa-stack-2x{
+  color: @darkPink;
+}
+#about .fa-stack .fa-stack-1x{
+  color: #fff;
+  text-shadow: 0 0 2px #fff;
+}
+
+#about p{
+  font-size: 1.2em;
+  padding: 5px 0 35px;
+}
+
+#about .services{
+  text-align: left;
+}
+
+/************************************/
+/********      Memories       *******/
+/************************************/
+
+#memories{
+  background: @softPink;
+  box-shadow: 0 5px 10px #222;
+  z-index: 2;
+}
+
+#memories h1{
+  color: #fff;
+}
+
+#memories p{
+  font-size: 1.3em;
+}
+
+/************************************/
+/********      Section       ********/
+/************************************/
+
+#section{
+  padding: 50px 0;
+}
+
+/************************************/
+/********      Contact       ********/
+/************************************/
+
+#contact {
+  background: #eee;
+  box-shadow: 0 0 15px 1.5px #222;
+  padding: 10px 0 30px;
+}
+#contact i{
+  color: @softPink;
+  font-size: 3em;
+}
+#contact .fa-facebook,
+#contact .fa-twitter{
+  color: @softPink;
+  font-size: 7.5em;
+  padding: 50px 0 0;
+  transition: all .2s;
+}
+#contact .fa-facebook:hover,
+#contact .fa-twitter:hover{
+  color: @activeColor;
+  text-shadow: 0 0 10px @activeColor;
+}
+
+#contact a{
+  color: #000;
+  text-decoration: none;
+  transition: all .2s;
+}
+#contact a:hover{
+  color: @activeColor;
+  text-decoration: none;
+  text-shadow: 0 0 5px #fff;
+}
+
+#contact img{
+  border-radius: 70px;
+  box-shadow: 0 0 5px 3px #222;
+  width : 75%;
+}
+
+#contact form{
+  text-align: left;
+}
+#contact form input,
+#contact form textarea{
+  border-radius: 10px;
+  font-size: 1.5em;
+  margin-top: 2%;
+  padding: 5px;
+  text-align: center;
+  width: 90%;
+}
+
+/************************************/
+/********      Respond       ********/
+/************************************/
+
+@media (max-width: 1920px) {
+  #contact img{
+    width : 50%;
+  }
+}
+
+@media (max-width: 1768px) {
+  #contact img{
+    width : 60%;
+  }
+}

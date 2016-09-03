@@ -195,6 +195,7 @@ span h4{
 #memories{
   background: @softPink;
   box-shadow: 0 5px 10px #222;
+  padding: 0 0 30px;
   z-index: 2;
 }
 
@@ -204,6 +205,33 @@ span h4{
 
 #memories p{
   font-size: 1.3em;
+}
+
+#memories .main-gallery .main-gallery-block{
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #333;
+  transition: all .5s;
+  width: 90%;
+}
+
+#memories .main-gallery .main-gallery-block img{
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+}
+
+#memories .main-gallery .main-gallery-block .main-gallery-description{
+  padding: 10px 5px 20px;
+  transition: all .5s;
+}
+
+#memories .main-gallery .main-gallery-block:hover{
+  background: @softPink;
+  cursor: pointer;
+}
+
+#memories .main-gallery .main-gallery-block:hover .main-gallery-description{
+  color: #fff;
 }
 
 /************************************/

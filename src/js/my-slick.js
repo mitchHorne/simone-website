@@ -1,11 +1,12 @@
 const mainGallery = $(".main-gallery");
+const galleryBlocks = $(".main-gallery-block")
 const specGallery = $(".specific-gallery");
 const myGallery = $(".my-slick-gallery");
 
 function startSlick(obj) {
 
-    mainGallery.removeClass("fadeInLeft");
-    mainGallery.addClass("fadeOutLeft");
+    galleryBlocks.removeClass("fadeInLeft");
+    galleryBlocks.addClass("fadeOutLeft");
 
     for(let i=0; i<obj.length; i++){
         myGallery.append(obj[i]);
@@ -48,8 +49,8 @@ function destroySlick(){
         },
         2500);
     setTimeout(()=>{
-            mainGallery.removeClass("fadeOutLeft");
-            mainGallery.addClass("fadeInLeft");
+            galleryBlocks.removeClass("fadeOutLeft");
+            galleryBlocks.addClass("fadeInLeft");
         },
         3500);
 }

@@ -12,8 +12,9 @@ function startSlick(obj) {
     }
 
     myGallery.slick({
+        adaptiveHeight: true,
         fade: true,
-        lazyLoad: "progressive",
+        lazyLoad: "progressive"
     });
 
     setTimeout(()=>{
@@ -70,11 +71,11 @@ $(".main-gallery-block").on("click", ()=>{
 //Baby Showers
 function createBabyShower1(){
     const object = [
-        "<img style='height: auto' data-lazy='./src/galleries/babyshower/payton/payton-cover.jpg'/>",
-        "<img style='height: auto' data-lazy='./src/galleries/babyshower/payton/payton-1.jpg'/>",
-        "<img style='height: auto' data-lazy='./src/galleries/babyshower/payton/payton-2.jpg'/>",
-        "<img style='height: auto' data-lazy='./src/galleries/babyshower/payton/payton-3.jpg'/>",
-        "<img style='height: auto' data-lazy='./src/galleries/babyshower/payton/payton-4.jpg'/>"
+        "<img class='carousel-images' data-lazy='./src/galleries/babyshower/payton/payton-cover.jpg'/>",
+        "<img class='carousel-images' data-lazy='./src/galleries/babyshower/payton/payton-1.jpg'/>",
+        "<img class='carousel-images' data-lazy='./src/galleries/babyshower/payton/payton-2.jpg'/>",
+        "<img class='carousel-images' data-lazy='./src/galleries/babyshower/payton/payton-3.jpg'/>",
+        "<img class='carousel-images' data-lazy='./src/galleries/babyshower/payton/payton-4.jpg'/>"
     ];
 
     startSlick(object);

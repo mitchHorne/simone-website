@@ -148,12 +148,6 @@ span h4{
 }
 
 /************************************/
-/********      Carousel      ********/
-/************************************/
-
-
-
-/************************************/
 /*********      About       *********/
 /************************************/
 
@@ -207,9 +201,17 @@ span h4{
   font-size: 1.3em;
 }
 
+#memories .main-gallery{
+  max-height: 300px;
+}
+#memories .specific-gallery{
+  max-height: 400px;
+}
+
 #memories .main-gallery,
 #memories .specific-gallery{
-  transition: all .3s;
+  overflow: hidden;
+  transition: all 1s ease;
 }
 
 #memories .main-gallery .main-gallery-block{
@@ -324,6 +326,5 @@ span h4{
 /************************************/
 
 .closed{
-  height: 0;
-  overflow: hidden;
+  max-height: 0 !important;
 }

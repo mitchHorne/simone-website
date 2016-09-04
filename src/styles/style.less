@@ -207,6 +207,11 @@ span h4{
   font-size: 1.3em;
 }
 
+#memories .main-gallery,
+#memories .specific-gallery{
+  transition: all .3s;
+}
+
 #memories .main-gallery .main-gallery-block{
   background: #fff;
   border-radius: 15px;
@@ -312,4 +317,13 @@ span h4{
   #contact img{
     width : 60%;
   }
+}
+
+/************************************/
+/********    OverRiding      ********/
+/************************************/
+
+.closed{
+  height: 0;
+  overflow: hidden;
 }

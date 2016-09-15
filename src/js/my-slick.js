@@ -5,8 +5,8 @@ const myGallery = $(".my-slick-gallery");
 
 function startSlick(obj) {
 
-    galleryBlocks.removeClass("fadeInLeft");
-    galleryBlocks.addClass("fadeOutLeft");
+    galleryBlocks.removeClass("fadeIn");
+    galleryBlocks.addClass("fadeOut");
 
     for(let i=0; i<obj.length; i++){
         myGallery.append(obj[i]);
@@ -27,16 +27,16 @@ function startSlick(obj) {
         },
         2500);
     setTimeout(()=>{
-            specGallery.removeClass("fadeOutRight");
-            specGallery.addClass("fadeInRight");
+            specGallery.removeClass("fadeOut");
+            specGallery.addClass("fadeIn");
         },
         3500);
 
 }
 
 function destroySlick(){
-    specGallery.removeClass("fadeInRight");
-    specGallery.addClass("fadeOutRight");
+    specGallery.removeClass("fadeIn");
+    specGallery.addClass("fadeOut");
 
     setTimeout(()=>{
             specGallery.addClass("closed");
@@ -49,8 +49,8 @@ function destroySlick(){
         },
         2500);
     setTimeout(()=>{
-            galleryBlocks.removeClass("fadeOutLeft");
-            galleryBlocks.addClass("fadeInLeft");
+            galleryBlocks.removeClass("fadeOut");
+            galleryBlocks.addClass("fadeIn");
         },
         3500);
 }

@@ -16,7 +16,6 @@ function startSlick(obj) {
     }
 
     myGallery.slick({
-        adaptiveHeight: true,
         arrows: false,
         centerMode:true,
         customPaging: ()=> {

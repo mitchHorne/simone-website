@@ -3,6 +3,9 @@ const galleryBlocks = $(".main-gallery-block")
 const specGallery = $(".specific-gallery");
 const myGallery = $(".my-slick-gallery");
 
+const prevArrow = "<span class='prev-button-container'><i class='fa fa-angle-left fa-3x'></i></span>";
+const nextArrow = "<span class='next-button-container'><i class='fa fa-angle-right fa-3x'></i></span>";
+
 function startSlick(obj) {
 
     galleryBlocks.removeClass("fadeIn");
@@ -14,8 +17,14 @@ function startSlick(obj) {
 
     myGallery.slick({
         adaptiveHeight: true,
+        arrows: false,
+        centerMode:true,
+        customPaging: ()=> {
+            return $('<a></a>').text('.');
+        },
+        dots: true,
         fade: true,
-        lazyLoad: "progressive"
+        lazyLoad: "progressive",
     });
 
     setTimeout(()=>{

@@ -253,10 +253,10 @@ span h4{
 }
 
 #memories .specific-gallery .carousel-images{
-  border: 10px solid #fff;
   border-radius: 20px;
   height: auto;
 }
+
 
 #memories .specific-gallery .gallery-back-button{
   background: #fff;
@@ -264,7 +264,7 @@ span h4{
   border-radius: 10px;
   box-shadow: 3px 3px 10px #333;
   font-size: 1.8em;
-  margin: 10px;
+  margin: 60px;
   padding: 5px 15px 0;
   transition: all .3s;
 }
@@ -282,6 +282,41 @@ span h4{
 }
 #memories .specific-gallery .gallery-back-button:focus {
   outline: none;
+}
+
+#memories .slick-dots{
+  bottom: -45px;
+  display: block;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.slick-dots li {
+  cursor: pointer;
+  display: inline-block;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  position: relative;
+  width: 20px;
+}
+.slick-dots li a{
+  border-radius: 100%;
+  background: #eee;
+  color: #eee;
+  font-size: 1px;
+  margin: 5px 20px 5px -10px;
+  padding: 5px;
+  transition: all 0.3s;
+}
+
+.slick-dots .slick-active a{
+  background: @darkPink;
+  border: 1px solid #fff;
+  box-shadow: 0 0 5px #fff;
+  padding: 6px;
 }
 
 /************************************/

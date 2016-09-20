@@ -3,8 +3,12 @@ const galleryBlocks = $(".main-gallery-block")
 const specGallery = $(".specific-gallery");
 const myGallery = $(".my-slick-gallery");
 
-const prevArrow = "<span class='prev-button-container'><i class='fa fa-angle-left fa-3x'></i></span>";
-const nextArrow = "<span class='next-button-container'><i class='fa fa-angle-right fa-3x'></i></span>";
+const prevArrow = "<span class='fa-stack fa-lg prev-button-container'>" +
+    "<i class='fa fa-circle fa-stack-2x'></i><i class='fa fa-arrow-left fa-stack-1x'><" +
+    "/i></span>";
+const nextArrow = "<span class='fa-stack fa-lg next-button-container'>" +
+    "<i class='fa fa-circle fa-stack-2x'></i><i class='fa fa-arrow-right fa-stack-1x'>" +
+    "</i></span>";
 
 function startSlick(obj) {
 
@@ -16,7 +20,7 @@ function startSlick(obj) {
     }
 
     myGallery.slick({
-        arrows: false,
+        arrows: true,
         centerMode:true,
         customPaging: ()=> {
             return $('<a></a>').text('.');
@@ -24,6 +28,9 @@ function startSlick(obj) {
         dots: true,
         fade: true,
         lazyLoad: "progressive",
+        nextArrow: nextArrow,
+        prevArrow: prevArrow
+
     });
 
     setTimeout(()=>{

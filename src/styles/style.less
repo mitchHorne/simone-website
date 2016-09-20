@@ -208,7 +208,7 @@ span h4{
   max-height: 350px;
 }
 #memories .specific-gallery{
-  max-height: 500px;
+  max-height: 520px;
 }
 
 #memories .main-gallery,
@@ -259,9 +259,59 @@ span h4{
 #memories .specific-gallery .carousel-images{
   border-radius: 20px;
   height: 400px;
-  width: 1200px;
 }
 
+#memories .specific-gallery .fa-stack{
+  font-size: 2.2em;
+}
+
+#memories .specific-gallery .prev-button-container,
+#memories .specific-gallery .next-button-container{
+  border-radius: 100%;
+  position: absolute;
+  top : 170px;
+}
+
+
+#memories .specific-gallery .prev-button-container:hover .fa-circle,
+#memories .specific-gallery .next-button-container:hover .fa-circle{
+  color: @softPink;
+  cursor: pointer;
+
+}
+#memories .specific-gallery .prev-button-container:hover .fa-arrow-left,
+#memories .specific-gallery .next-button-container:hover .fa-arrow-right{
+  color: @white;
+  cursor: pointer;
+}
+
+#memories .specific-gallery .prev-button-container:active,
+#memories .specific-gallery .next-button-container:active{
+  top: 171px;
+}
+#memories .specific-gallery .prev-button-container:active .fa-circle,
+#memories .specific-gallery .next-button-container:active .fa-circle{
+  color: @darkPink;
+  cursor: pointer;
+  text-shadow: 1px 1px 3px #222;
+}
+
+#memories .specific-gallery .prev-button-container{
+  left : -50px;
+}
+#memories .specific-gallery .next-button-container{
+  right: -50px;
+}
+
+#memories .specific-gallery .fa-circle{
+  color: @white;
+  text-shadow: 3px 3px 5px #222;
+  transition: all 0.3s;
+}
+#memories .specific-gallery .fa-arrow-left,
+#memories .specific-gallery .fa-arrow-right{
+  color: @softPink;
+}
 
 #memories .specific-gallery .gallery-back-button{
   background: #fff;

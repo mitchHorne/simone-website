@@ -420,17 +420,39 @@ span h4{
   text-decoration: none;
 }
 
-#social-media .social-media-icon-block .social-media-icon.facebook-icon i {
-  padding: 10px 50px 10px 30px;
+#social-media .social-media-icon-block .social-media-icon i {
+  padding: 15px 50px 10px 30px;
+  transition: all 0.3s;
 }
 
 #social-media .social-media-icon-block .social-media-icon.facebook-icon i{
   background: #3b5998;
-  border-right: 5px solid #fff;
-  border-top: 5px solid #fff;
+  border: 5px solid #fff;
+  border-left: 0;
   border-radius: 0 20px 0 0;
   color: #fff;
 }
+#social-media .social-media-icon-block .social-media-icon.twitter-icon i{
+  background: #1da0f2;
+  border-bottom: 5px solid #fff;
+  border-right: 5px solid #fff;
+  color: #fff;
+}
+#social-media .social-media-icon-block .social-media-icon.pinterest-icon i{
+  background: #bd081c;
+  border-bottom: 5px solid #fff;
+  border-right: 5px solid #fff;
+  border-radius: 0 0 20px 0;
+  color: #fff;
+}
+
+#social-media .social-media-icon-block .social-media-icon.facebook-icon i:hover,
+#social-media .social-media-icon-block .social-media-icon.twitter-icon i:hover,
+#social-media .social-media-icon-block .social-media-icon.pinterest-icon i:hover{
+  background: @softPink;
+  cursor: pointer;
+}
+
 
 /************************************/
 /********      Respond       ********/

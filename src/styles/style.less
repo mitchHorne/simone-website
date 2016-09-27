@@ -1,26 +1,36 @@
-@white: #fff;
-@darkPink: #E53971;
-@softPink: #FF69B4;
-@activeColor: #62B1F6;
+@activeColor   : #62B1F6;
+@black         : #000000;
+@darkPink      : #E53971;
+@dots          : #EEEEEE;
+@galleryShadow : #222222;
+@selectColor   : #FFB7B7;
+@shadow        : #999999;
+@softPink      : #FF69B4;
+@transition    : all .3s;
+@transitionLong: all .5s;
+@white         : #FFFFFF;
 
 /************************************/
 /*********       Main       *********/
 /************************************/
 
 ::selection {
-  background: #ffb7b7;
+  background: @selectColor;
 }
 ::-moz-selection {
-  background: #ffb7b7;
+  background: @selectColor;
 }
 
 body{
-  background: #fff ;
+  background : @white ;
   font-family: 'Great Vibes', cursive;
-  text-align: center;
+  text-align : center;
 }
 
-a, a:hover, a:active, a:focus{
+a,
+a:hover,
+a:active,
+a:focus{
   outline: 0 !important;
 }
 
@@ -29,23 +39,21 @@ a, a:hover, a:active, a:focus{
 }
 
 hr{
-  height: 25px;
-  border-style: solid;
-  border-color: #222;
-  border-width: 1px 0 0 0;
+  border       : solid #222;
   border-radius: 150px;
-  width: 50%;
+  border-width : 1px 0 0 0;
+  height       : 25px;
+  width        : 50%;
 }
 hr:before{
-  display: block;
-  content: "";
-  height: 25px;
-  margin-top: -25px;
-  border-style: solid;
-  border-color: #222;
-  border-width: 0 0 1px 0;
+  border: solid #222;
   border-radius: 150px;
-  width: 100%;
+  border-width : 0 0 1px 0;
+  content      : "";
+  display      : block;
+  height       : 25px;
+  margin-top   : -25px;
+  width        : 100%;
 }
 
 span h4{
@@ -57,7 +65,7 @@ span h4{
 }
 
 .special-text{
-  color: @darkPink;
+  color      : @darkPink;
   font-family: 'Great Vibes', cursive;
 }
 
@@ -67,67 +75,70 @@ span h4{
 
 .menu-control{
   position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 10;
+  right   : 0;
+  top     : 0;
+  z-index : 10;
 }
 
 .menu-control i{
-  background: #fff;
+  background   : #fff;
   border-bottom: 1px solid @softPink;
-  border-left: 1px solid @softPink;
+  border-left  : 1px solid @softPink;
   border-radius: 0 0 0 15px;
-  color: #E53971;
-  padding: 10px 20px;
-  transition: all .3s;
+  color        : #E53971;
+  padding      : 10px 20px;
+  transition   : @transition;
 }
+
 .menu-control i:active,
 .menu-control i:focus{
-  text-shadow: 0 0 10px #fff;
+  text-shadow: 0 0 10px @white;
 }
+
 .menu-control i:hover{
   background: #F79BC0;
-  color: #fff;
-  cursor: pointer;
+  color     : #fff;
+  cursor    : pointer;
 }
 
 .menu{
-  background: #fff;
+  background : #fff;
   border-left: 1px solid @softPink;
-  display: block;
-  height: 100vh;
-  padding: 20px;
-  position: fixed;
-  right: 0;
-  text-align: left;
-  width: 25%;
-  z-index: 5;
+  display    : block;
+  height     : 100vh;
+  padding    : 20px;
+  position   : fixed;
+  right      : 0;
+  text-align : left;
+  width      : 25%;
+  z-index    : 5;
 }
 
 .menu .brand{
-  color: #444;
-  display: inline-block;
-  font-size: 3em;
+  color          : #444;
+  display        : inline-block;
+  font-size      : 3em;
   text-decoration: none;
-  transition: all .3s;
+  transition     : @transition;
 }
+
 .menu .item-list{
   display: block;
   padding: 5px 10px 5px 20px;
 }
 
 .menu .menu-item{
-  color: #444;
-  font-size: 2.2em;
+  color          : #444;
+  font-size      : 2.2em;
   text-decoration: none;
-  transition: all .3s;
-  width: 100%;
+  transition     : @transition;
+  width          : 100%;
 }
 
 .menu .brand:hover,
 .menu .menu-item:hover{
-  color:#E53971;
-  text-shadow: 0 0 10px  #F79BC0;
+  color      :@darkPink;
+  text-shadow: 0 0 10px  @softPink;
 }
 
 /************************************/
@@ -135,19 +146,19 @@ span h4{
 /************************************/
 
 .header{
-  align-items: flex-end;
-  background: url("../images/background.jpg") top right no-repeat;
+  align-items    : flex-end;
+  background     : url("../images/background.jpg") top right no-repeat;
   background-size: 75% 100%;
-  display: flex;
+  display        : flex;
   justify-content: left;
-  height: 100vh;
+  height         : 100vh;
 }
 
 .header h1{
-  color: #E53971;
-  font-size: 6em;
-  padding: 0 0 150px 40px;
-  text-shadow: 0 0 10px #fff;
+  color      : #E53971;
+  font-size  : 6em;
+  padding    : 0 0 150px 40px;
+  text-shadow: 0 0 10px @white;
 }
 
 /************************************/
@@ -159,52 +170,53 @@ span h4{
 }
 
 #about h1{
-  color: @darkPink;
+  color    : @darkPink;
   font-size: 3em;
-  padding: 10px 0 5px;
+  padding  : 10px 0 5px;
 }
 
 #about .fa-stack{
-  text-shadow: 0 0 5px 2px #222;
-  font-size: 4em;
+  text-shadow: 0 0 5px 2px @shadow;
+  font-size  : 4em;
 }
+
 #about .fa-stack .fa-stack-2x{
   color: @darkPink;
 }
+
 #about .fa-stack .fa-stack-1x{
-  color: #fff;
-  text-shadow: 0 0 2px #fff;
+  color      : @white;
+  text-shadow: 0 0 2px @white;
 }
 
 #about p{
   font-size: 1.2em;
-  padding: 5px 0 35px;
+  padding  : 5px 0 35px;
 }
 
 #about .services{
   border-radius: 50px;
-  box-shadow: 5px 5px 15px #222;
+  box-shadow   : 5px 5px 15px @shadow;
   margin-bottom: 30px;
-  text-align: center;
-  width: 100%;
-}
-#about .services .service-container .service-container-header{
-}
-#about .services .service-container .service-container-header h3{
-  border: 1px solid transparent;
-  border-radius: 50px;
-  margin: 0;
-  padding: 30px 0 20px;
-  transition: all .3s;
-}
-#about .services .service-container .service-container-header h3:hover{
-  background: #fecfe9;
-  box-shadow: 5px 5px 5px #999;
-  cursor: pointer;
-  position: relative;
-  top: -1px;
+  text-align   : center;
+  width        : 100%;
 }
 
+#about .services .service-container .service-container-header h3{
+  border       : 1px solid transparent;
+  border-radius: 50px;
+  margin       : 0;
+  padding      : 30px 0 20px;
+  transition   : @transition;
+}
+
+#about .services .service-container .service-container-header h3:hover{
+  background: #fecfe9;
+  box-shadow: 5px 5px 5px @shadow;
+  cursor    : pointer;
+  position  : relative;
+  top       : -1px;
+}
 
 /************************************/
 /********      Memories       *******/
@@ -212,9 +224,9 @@ span h4{
 
 #memories{
   background: @softPink;
-  box-shadow: 0 5px 10px #222;
-  padding: 0 0 30px;
-  z-index: 2;
+  box-shadow: 0 5px 10px @shadow;
+  padding   : 0 0 30px;
+  z-index   : 2;
 }
 
 #memories h1{
@@ -228,43 +240,45 @@ span h4{
 #memories .main-gallery{
   max-height: 350px;
 }
+
 #memories .specific-gallery{
   max-height: 520px;
 }
 
 #memories .main-gallery,
 #memories .specific-gallery{
-  overflow: hidden;
+  overflow  : hidden;
   transition: all 1s ease;
 }
 
 #memories .main-gallery .main-gallery-block{
-  background: #fff;
+  background   : #fff;
   border-radius: 15px;
-  box-shadow: 5px 5px 10px #333;
-  transition: all .5s;
-  width: 90%;
+  box-shadow   : 5px 5px 10px @galleryShadow;
+  transition   : @transitionLong;
+  width        : 90%;
 }
 
 #memories .main-gallery .main-gallery-block img{
   border-radius: 15px 15px 0 0;
-  width: 100%;
+  width        : 100%;
 }
 
 #memories .main-gallery .main-gallery-block .main-gallery-description{
-  padding: 10px 5px 20px;
-  transition: all .5s;
+  padding   : 10px 5px 20px;
+  transition: @transitionLong;
 }
 
 #memories .main-gallery .main-gallery-block:hover{
   background: @softPink;
-  cursor: pointer;
+  cursor    : pointer;
 }
+
 #memories .main-gallery .main-gallery-block:active{
   background: @darkPink;
-  bottom: -1px;
-  box-shadow: 3px 3px 6px #333;
-  position: relative;
+  bottom    : -1px;
+  box-shadow: 3px 3px 6px @galleryShadow;
+  position  : relative;
 }
 
 #memories .main-gallery .main-gallery-block:hover .main-gallery-description{
@@ -272,14 +286,14 @@ span h4{
 }
 
 #memories .specific-gallery .slick-list{
-  background: #ddd;
+  background   : #ddd;
   border-radius: 20px;
-  box-shadow: 5px 5px 10px #333;
+  box-shadow   : 5px 5px 10px @galleryShadow;
 }
 
 #memories .specific-gallery .carousel-images{
   border-radius: 20px;
-  height: 400px;
+  height       : 400px;
 }
 
 #memories .specific-gallery .fa-stack{
@@ -289,20 +303,20 @@ span h4{
 #memories .specific-gallery .prev-button-container,
 #memories .specific-gallery .next-button-container{
   border-radius: 100%;
-  position: absolute;
-  top : 170px;
+  position     : absolute;
+  top          : 170px;
 }
 
 
 #memories .specific-gallery .prev-button-container:hover .fa-circle,
 #memories .specific-gallery .next-button-container:hover .fa-circle{
-  color: @softPink;
+  color : @softPink;
   cursor: pointer;
 
 }
 #memories .specific-gallery .prev-button-container:hover .fa-arrow-left,
 #memories .specific-gallery .next-button-container:hover .fa-arrow-right{
-  color: @white;
+  color : @white;
   cursor: pointer;
 }
 
@@ -310,89 +324,97 @@ span h4{
 #memories .specific-gallery .next-button-container:active{
   top: 171px;
 }
+
 #memories .specific-gallery .prev-button-container:active .fa-circle,
 #memories .specific-gallery .next-button-container:active .fa-circle{
-  color: @darkPink;
-  cursor: pointer;
-  text-shadow: 1px 1px 3px #222;
+  color      : @darkPink;
+  cursor     : pointer;
+  text-shadow: 1px 1px 3px @galleryShadow;
 }
 
 #memories .specific-gallery .prev-button-container{
-  left : -50px;
+  left: -50px;
 }
+
 #memories .specific-gallery .next-button-container{
   right: -50px;
 }
 
 #memories .specific-gallery .fa-circle{
-  color: @white;
-  text-shadow: 3px 3px 5px #222;
-  transition: all 0.3s;
+  color      : @white;
+  text-shadow: 3px 3px 5px @galleryShadow;
+  transition : @transition;
 }
+
 #memories .specific-gallery .fa-arrow-left,
 #memories .specific-gallery .fa-arrow-right{
   color: @softPink;
 }
 
 #memories .specific-gallery .gallery-back-button{
-  background: #fff;
-  border: 0;
+  background   : @white;
+  border       : 0;
   border-radius: 10px;
-  box-shadow: 3px 3px 10px #333;
-  font-size: 1.8em;
-  margin: 60px;
-  padding: 5px 15px 0;
-  transition: all .3s;
+  box-shadow   : 3px 3px 10px @galleryShadow;
+  font-size    : 1.8em;
+  margin       : 60px;
+  padding      : 5px 15px 0;
+  transition   : @transition;
 }
+
 #memories .specific-gallery .gallery-back-button:hover{
   background: @softPink;
-  color: #fff;
+  color     : @white;
 }
+
 #memories .specific-gallery .gallery-back-button:active{
   background: @darkPink;
-  border: 0;
-  bottom: -1px;
-  box-shadow: 1px 1px 5px #333;
-  color: #fff;
-  position: relative;
+  border    : 0;
+  bottom    : -1px;
+  box-shadow: 1px 1px 5px @galleryShadow;
+  color     : @white;
+  position  : relative;
 }
+
 #memories .specific-gallery .gallery-back-button:focus {
   outline: none;
 }
 
 #memories .slick-dots{
-  bottom: -45px;
-  display: block;
+  bottom    : -45px;
+  display   : block;
   list-style: none;
-  padding: 0;
-  position: absolute;
+  padding   : 0;
+  position  : absolute;
   text-align: center;
-  width: 100%;
+  width     : 100%;
 }
+
 .slick-dots li {
-  cursor: pointer;
-  display: inline-block;
-  height: 20px;
-  margin: 0 5px;
-  padding: 0;
+  cursor  : pointer;
+  display : inline-block;
+  height  : 20px;
+  margin  : 0 5px;
+  padding : 0;
   position: relative;
-  width: 20px;
+  width   : 20px;
 }
+
 .slick-dots li a{
   border-radius: 100%;
-  background: #eee;
-  color: #eee;
-  font-size: 1px;
-  margin: 5px 20px 5px -10px;
-  padding: 5px;
-  transition: all 0.3s;
+  background   : #eee;
+  color        : #eee;
+  font-size    : 1px;
+  margin       : 5px 20px 5px -10px;
+  padding      : 5px;
+  transition   : @transition;
 }
 
 .slick-dots .slick-active a{
   background: @darkPink;
-  border: 1px solid #fff;
-  box-shadow: 0 0 5px #fff;
-  padding: 6px;
+  border    : 1px solid @white;
+  box-shadow: 0 0 5px @white;
+  padding   : 6px;
 }
 
 /************************************/
@@ -408,23 +430,25 @@ span h4{
 /************************************/
 
 #contact {
-  background: #fff;
-  box-shadow: 0 0 15px 1.5px #222;
-  padding: 10px 0 30px;
+  background: @white;
+  box-shadow: 0 0 15px 1.5px @shadow;
+  padding   : 10px 0 30px;
 }
+
 #contact i{
   color: @softPink;
 }
 
 #contact a{
-  color: #000;
+  color          : @black;
   text-decoration: none;
-  transition: all .2s;
+  transition     : @transition;
 }
+
 #contact a:hover{
-  color: @activeColor;
+  color          : @activeColor;
   text-decoration: none;
-  text-shadow: 0 0 5px #fff;
+  text-shadow    : 0 0 5px @white;
 }
 
 /************************************/
@@ -432,9 +456,9 @@ span h4{
 /************************************/
 
 #social-media{
-  left: 0;
+  left    : 0;
   position: fixed;
-  top: 0;
+  top     : 0;
 }
 
 #social-media .social-media-icon-block .social-media-icon a{
@@ -442,46 +466,50 @@ span h4{
 }
 
 #social-media .social-media-icon-block .social-media-icon i {
-  padding: 15px 50px 10px 30px;
-  transition: all 0.3s;
+  padding   : 15px 50px 10px 30px;
+  transition: @transition;
 }
 
 #social-media .social-media-icon-block .social-media-icon.facebook-icon i{
-  background: #3b5998;
-  border: 5px solid #fff;
-  border-left: 0;
+  background   : #3b5998;
+  border       : 5px solid @white;
+  border-left  : 0;
   border-radius: 0 20px 0 0;
-  color: #fff;
+  color        : @white;
 }
+
 #social-media .social-media-icon-block .social-media-icon.twitter-icon i{
-  background: #1da0f2;
-  border-bottom: 5px solid #fff;
-  border-right: 5px solid #fff;
-  color: #fff;
+  background   : #1da0f2;
+  border-bottom: 5px solid @white;
+  border-right : 5px solid @white;
+  color        : @white;
 }
+
 #social-media .social-media-icon-block .social-media-icon.instagram-icon i{
-  background: linear-gradient(to top right, #f6c466, #f56d3a, #dc3370, #b838a6, #9a3fbf);
-  border-bottom: 5px solid #fff;
-  border-right: 5px solid #fff;
-  color: #fff;
+  background   : linear-gradient(to top right, #f6c466, #f56d3a, #dc3370, #b838a6, #9a3fbf);
+  border-bottom: 5px solid @white;
+  border-right : 5px solid @white;
+  color        : @white;
 }
+
 #social-media .social-media-icon-block .social-media-icon.pinterest-icon i{
-  background: #bd081c;
-  border-bottom: 5px solid #fff;
-  border-right: 5px solid #fff;
+  background   : #bd081c;
+  border-bottom: 5px solid @white;
+  border-right : 5px solid @white;
   border-radius: 0 0 20px 0;
-  color: #fff;
+  color        : @white;
 }
 
 #social-media .social-media-icon-block .social-media-icon.facebook-icon i:hover,
 #social-media .social-media-icon-block .social-media-icon.twitter-icon i:hover,
 #social-media .social-media-icon-block .social-media-icon.pinterest-icon i:hover{
   background: @softPink;
-  cursor: pointer;
+  cursor    : pointer;
 }
+
 #social-media .social-media-icon-block .social-media-icon.instagram-icon i:hover{
   background: linear-gradient(to top right, @softPink, @softPink);
-  cursor: pointer;
+  cursor    : pointer;
 }
 
 #social-media .social-media-icon-block .social-media-icon.facebook-icon i:active,
@@ -489,6 +517,7 @@ span h4{
 #social-media .social-media-icon-block .social-media-icon.pinterest-icon i:active{
   background: @darkPink;
 }
+
 #social-media .social-media-icon-block .social-media-icon.instagram-icon i:active{
   background: linear-gradient(to top right, @darkPink, @darkPink);
 }
@@ -499,13 +528,13 @@ span h4{
 
 @media (max-width: 1920px) {
   #contact img{
-    width : 50%;
+    width: 50%;
   }
 }
 
 @media (max-width: 1768px) {
   #contact img{
-    width : 60%;
+    width: 60%;
   }
 }
 

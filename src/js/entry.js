@@ -8,6 +8,7 @@ require("../styles/slick.css");
 require("../styles/animate.css");
 require("../styles/style.less");
 require("./menu");
+require("./accoridian");
 
 $(document).ready(() => {
     $(".se-pre-con").fadeOut(2500);

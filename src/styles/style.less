@@ -213,9 +213,17 @@ span h4{
 #about .services .service-container .service-container-header h3:hover{
   background: #fecfe9;
   box-shadow: 5px 5px 5px @shadow;
+  color: @black;
   cursor    : pointer;
   position  : relative;
   top       : -1px;
+}
+
+#about .services .service-container .service-container-header.active h3{
+  background: @darkPink;
+  box-shadow: 5px 5px 5px @shadow;
+  color: @white;
+  position: static;
 }
 
 #about .services .service-container .service-container-body{

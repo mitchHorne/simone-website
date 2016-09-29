@@ -45,6 +45,11 @@ function startSlick(obj) {
             specGallery.addClass("fadeIn");
         },
         3500);
+    setTimeout(()=>{
+        ($('html, body').animate({
+            scrollTop: $("#memories").offset().top
+        }, 500));
+    }, 3500);
 
 }
 
@@ -67,6 +72,11 @@ function destroySlick(){
             galleryBlocks.addClass("fadeIn");
         },
         3500);
+    setTimeout(()=>{
+        ($('html, body').animate({
+            scrollTop: $("#memories").offset().top
+        }, 500));
+    }, 3500);
 }
 
 /*   React on back to gallery click   */

@@ -2,11 +2,9 @@
 const service = $('.service-container-header');
 
 service.on('click', (event)=>{
-    //Moving the currently active header to latest clicked one
+    const serviceHeader = event.currentTarget;
     $('.service-container-header.active').removeClass('active');
-    event.currentTarget.className += ' active';
 
-    //Open the closed service container body
     const serviceBody       = $('.' + event.currentTarget.dataset.serviceBody);
     const activeServiceBody = $('.active-service-body');
 
@@ -17,6 +15,7 @@ service.on('click', (event)=>{
     }
 
     if(activeServiceBody[0]) {
+        serviceHeader.className += ' active';
         activeServiceBody.removeClass('active-service-body');
         activeServiceBody.addClass('closed');
 
@@ -25,6 +24,7 @@ service.on('click', (event)=>{
             serviceBody.removeClass('closed');
         }, 500);
     } else {
+        serviceHeader.className += ' active';
         serviceBody.addClass('active-service-body');
         serviceBody.removeClass('closed');
     }

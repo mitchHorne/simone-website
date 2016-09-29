@@ -195,7 +195,7 @@ span h4{
 }
 
 #about .services{
-  border-radius: 50px;
+  border-radius: 20px;
   box-shadow   : 5px 5px 15px @shadow;
   margin-bottom: 30px;
   text-align   : center;
@@ -204,7 +204,7 @@ span h4{
 
 #about .services .service-container .service-container-header h3{
   border       : 1px solid transparent;
-  border-radius: 50px;
+  border-radius: 20px;
   margin       : 0;
   padding      : 30px 0 20px;
   transition   : @transition;
@@ -212,8 +212,8 @@ span h4{
 
 #about .services .service-container .service-container-header h3:hover{
   background: #fecfe9;
-  box-shadow: 5px 5px 5px @shadow;
-  color: @black;
+  box-shadow: 5px 5px 10px @shadow;
+  color     : @black;
   cursor    : pointer;
   position  : relative;
   top       : -1px;
@@ -222,15 +222,20 @@ span h4{
 #about .services .service-container .service-container-header.active h3{
   background: @darkPink;
   box-shadow: 5px 5px 5px @shadow;
-  color: @white;
-  position: static;
+  color     : @white;
+  position  : static;
 }
 
 #about .services .service-container .service-container-body{
-  max-height: 300px;
-  padding: 20px 0;
+  background: #fafafa;
+  max-height: 400px;
+  padding   : 20px 0;
   overflow  : hidden;
   transition: all .5s ease;
+}
+
+#about .services .service-container .service-container-body.bottom{
+  border-radius: 0 0 20px 20px;
 }
 
 /************************************/
@@ -239,7 +244,7 @@ span h4{
 
 #memories{
   background: @softPink;
-  box-shadow: 0 5px 10px @shadow;
+  box-shadow: 0 5px 10px #555;
   padding   : 0 0 30px;
   z-index   : 2;
 }
@@ -445,8 +450,7 @@ span h4{
 /************************************/
 
 #contact {
-  background: @white;
-  box-shadow: 0 0 15px 1.5px @shadow;
+  //box-shadow: 0 0 15px 1.5px @shadow;
   padding   : 10px 0 30px;
 }
 

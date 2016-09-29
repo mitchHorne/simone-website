@@ -1,5 +1,5 @@
 const mainGallery = $(".main-gallery");
-const galleryBlocks = $(".main-gallery-block")
+const galleryBlocks = $(".main-gallery-block");
 const specGallery = $(".specific-gallery");
 const myGallery = $(".my-slick-gallery");
 
@@ -30,7 +30,6 @@ function startSlick(obj) {
         lazyLoad: "progressive",
         nextArrow: nextArrow,
         prevArrow: prevArrow
-
     });
 
     setTimeout(()=>{
@@ -78,20 +77,52 @@ $(".gallery-back-button").on("click", ()=>{
 
 /*   React on click   */
 
-$(".main-gallery-block").on("click", ()=>{
-    createBabyShower1();
+galleryBlocks.on("click", (event)=>{
+    const clickedGallery = event.currentTarget;
+
+    switch(clickedGallery.id) {
+        case 'baby-shower-payton' :
+            createPaytonBabyShower();
+            break;
+        case 'baptism-payton' :
+            createPaytonBaptism();
+            break;
+        default :
+            break;
+    }
 });
+
 
 /*   Start creation of custom galleries function   */
 
 //Baby Showers
-function createBabyShower1(){
+function createPaytonBabyShower(){
     const object = [
-        "<img class='carousel-images' data-lazy='./src/galleries/babyshower/payton/payton-cover.jpg'/>",
-        "<img class='carousel-images' data-lazy='./src/galleries/babyshower/payton/payton-1.jpg'/>",
-        "<img class='carousel-images' data-lazy='./src/galleries/babyshower/payton/payton-2.jpg'/>",
-        "<img class='carousel-images' data-lazy='./src/galleries/babyshower/payton/payton-3.jpg'/>",
-        "<img class='carousel-images' data-lazy='./src/galleries/babyshower/payton/payton-4.jpg'/>"
+        "<img class='carousel-images' data-lazy='./src/galleries/babyshower/payton/main.jpg'/>",
+        "<img class='carousel-images' data-lazy='./src/galleries/babyshower/payton/payton_1.jpg'/>",
+        "<img class='carousel-images' data-lazy='./src/galleries/babyshower/payton/payton_2.jpg'/>",
+        "<img class='carousel-images' data-lazy='./src/galleries/babyshower/payton/payton_3.jpg'/>",
+        "<img class='carousel-images' data-lazy='./src/galleries/babyshower/payton/payton_4.jpg'/>"
+    ];
+
+    startSlick(object);
+}
+
+//Baptisms
+function createPaytonBaptism(){
+    const object = [
+        "<img class='carousel-images' data-lazy='./src/galleries/baptisms/payton/main.jpg'/>",
+        "<img class='carousel-images' data-lazy='./src/galleries/baptisms/payton/payton_1.jpg'/>",
+        "<img class='carousel-images' data-lazy='./src/galleries/baptisms/payton/payton_2.jpg'/>",
+        "<img class='carousel-images' data-lazy='./src/galleries/baptisms/payton/payton_3.jpg'/>",
+        "<img class='carousel-images' data-lazy='./src/galleries/baptisms/payton/payton_4.jpg'/>",
+        "<img class='carousel-images' data-lazy='./src/galleries/baptisms/payton/payton_5.jpg'/>",
+        "<img class='carousel-images' data-lazy='./src/galleries/baptisms/payton/payton_6.jpg'/>",
+        "<img class='carousel-images' data-lazy='./src/galleries/baptisms/payton/payton_7.jpg'/>",
+        "<img class='carousel-images' data-lazy='./src/galleries/baptisms/payton/payton_8.jpg'/>",
+        "<img class='carousel-images' data-lazy='./src/galleries/baptisms/payton/payton_9.jpg'/>",
+        "<img class='carousel-images' data-lazy='./src/galleries/baptisms/payton/payton_10.jpg'/>",
+        "<img class='carousel-images' data-lazy='./src/galleries/baptisms/payton/payton_11.jpg'/>",
     ];
 
     startSlick(object);

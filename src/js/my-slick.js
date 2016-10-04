@@ -38,6 +38,10 @@ function startSlick(obj) {
         1000);
     setTimeout(()=>{
             specGallery.removeClass("closed");
+
+            ($('html, body').animate({
+                scrollTop: $("#memories").offset().top
+            }, 1000));
         },
         2500);
     setTimeout(()=>{
@@ -45,11 +49,6 @@ function startSlick(obj) {
             specGallery.addClass("fadeIn");
         },
         3500);
-    setTimeout(()=>{
-        ($('html, body').animate({
-            scrollTop: $("#memories").offset().top
-        }, 500));
-    }, 3500);
 
 }
 
@@ -65,6 +64,10 @@ function destroySlick(){
             mainGallery.removeClass("closed");
             myGallery.slick("unslick");
             myGallery.empty();
+
+            ($('html, body').animate({
+                scrollTop: $("#memories").offset().top
+            }, 1000));
         },
         2500);
     setTimeout(()=>{
@@ -72,11 +75,6 @@ function destroySlick(){
             galleryBlocks.addClass("fadeIn");
         },
         3500);
-    setTimeout(()=>{
-        ($('html, body').animate({
-            scrollTop: $("#memories").offset().top
-        }, 500));
-    }, 3500);
 }
 
 /*   React on back to gallery click   */
